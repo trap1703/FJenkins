@@ -7,7 +7,7 @@ node {
 
     files = sh(returnStdout: true, script: 'ls')
     println "list of property files"
-    p_files = files.split("\n").collect()[1,2]
+    p_files = files.split("\n").collect()[2,3]
 
     
     properties([buildDiscarder(logRotator(numToKeepStr: '100')),
