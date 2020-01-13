@@ -3,6 +3,8 @@
 node{
     deleteDir()
     
+    checkout scm
+    
     properties([buildDiscarder(logRotator(numToKeepStr: '100'))])
     
     sh 'echo Welcome to IT'
