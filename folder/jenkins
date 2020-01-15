@@ -18,6 +18,6 @@ node {
                                 content = sh(returnStdout:true, script: \'cat ${file}\')
                                 return content''']]]
     	])])
-    println (file)
+    
     sh 'echo Welcome to IT!'
 }
