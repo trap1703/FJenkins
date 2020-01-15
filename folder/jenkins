@@ -19,5 +19,5 @@ node {
 				return content''']]]
     	])])
     
-    sh 'echo Hello World!'
+    sh 'echo Welcome to IT!'
 }
