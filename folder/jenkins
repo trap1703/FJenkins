@@ -23,10 +23,15 @@ node {
                         script: [
 						    $class: 'GroovyScript', 
 							fallbackScript: [ classpath: [], sandbox: false, script: ''],
-							script: [classpath: [], sandbox: false, script: '''file = ${param_files}
-                                content = sh(returnStdout:true, script: \'cat ${file}\')
-                                return content''']]]
-    	])])
+							script: [
+							    classpath: [], 
+								sandbox: false, 
+								script: '''file = ${param_files}, content = sh(returnStdout:true, script: \'cat ${file}\'), return content'''
+				     			]
+			         	]
+				]
+    	])
+	])
     
     sh 'echo Welcome to IT!'
 }
