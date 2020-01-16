@@ -12,9 +12,18 @@ node {
     
     properties([buildDiscarder(logRotator(numToKeepStr: '100')),
         parameters([
-                choice(choices: p_files, description: 'test test', name: 'param_files'),
-                [$class: 'CascadeChoiceParameter', choiceType: 'PT_SINGLE_SELECT', name: 'main_param', referencedParameters: 'param_files',
-                        script: [$class: 'GroovyScript', script: [classpath: [], sandbox: false, script: '''file = ${param_files}
+                choice(choices: p_files, 
+				description: 'test test', 
+				name: 'param_files'),
+                [$class: 'CascadeChoiceParameter',
+				choiceType: 'PT_SINGLE_SELECT',
+				name: 'main_param',
+				randomName: 'choice-parameter-348448661107465',
+				referencedParameters: 'param_files',
+                        script: [
+						    $class: 'GroovyScript', 
+							fallbackScript: [ classpath: [], sandbox: false, script: ''],
+							script: [classpath: [], sandbox: false, script: '''file = ${param_files}
                                 content = sh(returnStdout:true, script: \'cat ${file}\')
                                 return content''']]]
     	])])
