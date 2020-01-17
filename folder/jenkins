@@ -28,7 +28,7 @@ node {
 							script: [
 							    classpath: [], 
 								sandbox: false, 
-								script: '''content = sh(returnStdout:true, script: 'cat prop-file'), return content'''
+								script: '''file = ${param_files}, content = sh(returnStdout:true, script: 'cat prop-file'), return content'''
 				     			]
 			         	]
 				]
