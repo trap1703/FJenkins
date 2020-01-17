@@ -9,7 +9,7 @@ node {
     println "list of property files"
     p_files = files.split("\n").collect()[2,3]
     println (p_files)
-    X_files = sh(returnStdout:true, script: \'cat prop-file\')
+    X_files = sh(returnStdout:true, script: 'cat prop-file')
     println (X_files)
     
     properties([buildDiscarder(logRotator(numToKeepStr: '100')),
