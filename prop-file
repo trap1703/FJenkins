@@ -1,3 +1,3 @@
-name: 'property1', default_value: 'test', description: 'par1'
-name: 'property2', default_value: 'netest', description: 'par2'
-name: 'property3', default_value: 'check3', description: 'par3'
+string (name: 'property1', default_value: 'test', description: 'par1')
+string (name: 'property2', default_value: 'netest', description: 'par2')
+string (name: 'property3', default_value: 'check3', description: 'par3')
