@@ -16,9 +16,9 @@ node {
                 choice(choices: p_files, 
 				description: 'test test', 
 				name: 'param_files'),
-                choice(choices: ['dfdfd', 'dfdfd', 'dfdf', 'dfdf'], description: '', name: 'dd')])])
+                choice(choices: ['dfdfd', 'dfdfd', 'dfdf', 'dfdf'], description: '', name: 'dd')
       	])
-	])
+    ])
     
     sh 'echo Welcome to IT!'
 }
