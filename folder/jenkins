@@ -10,8 +10,8 @@ node {
     p_files = files.split("\n").collect()[2,3]
     println (p_files)
     X_files = sh(returnStdout:true, script: 'cat prop-file')
-    Y_files = X_files.split("\n").collect(),
-    Z_files = "return ${Y_files}",
+    Y_files = X_files.split("\n").collect()
+    Z_files = "return ${Y_files}"
     println (Z_files)
     
     properties([buildDiscarder(logRotator(numToKeepStr: '100')),
