@@ -27,7 +27,7 @@ node {
 		                script: [$class: 'GroovyScript', 
 							script: [classpath: [], 
 								 sandbox: false, 
-								 choice( choices: [script: sh(returnStdout: true, script: 'cat ${param_files}')])
+								 choices: script: sh(returnStdout: true, script: 'cat ${param_files}')
 				     		        ]
 				]
 		]
