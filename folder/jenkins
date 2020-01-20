@@ -22,6 +22,7 @@ node {
 		                filterLength: 1, 
 		                filterable: false,
 				name: 'main_param',
+		                choices: X_files,
 				randomName: 'choice-parameter-348448661107465',
 				referencedParameters: 'param_files',
 		                script: [$class: 'GroovyScript', 
