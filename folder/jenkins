@@ -16,6 +16,10 @@ node {
                 choice(choices: p_files, 
 				description: 'test test', 
 				name: 'param_files'),
+		X_files = sh(returnStdout:true, script: 'cat ${param_files}')
+                Y_files = X_files.split("\n").collect()
+                Z_files = "return ${Y_files}"
+                println (Z_files)
                 choice(choices: ['dfdfd', 'dfdfd', 'dfdf', 'dfdf'], description: '', name: 'dd')
       	])
     ])
