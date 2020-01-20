@@ -32,8 +32,8 @@ node {
 								 script: sh(returnStdout: true, script: 'echo return [\'property1\', \'property2\', \'property3\']')
 								 
 				     		        ]
-				],
-		                choices: X_files
+				]
+		                
 		]
       	])
 	])
