@@ -29,7 +29,7 @@ node {
 		                script: [$class: 'GroovyScript', 
 					                script: [classpath: [], 
 								 sandbox: false, 
-								 script: sh(returnStdout: true, script: 'echo return [\'property1\', \'property2\', \'property3\']')
+								 script: sh(returnStdout: true, script: 'echo '''return [\'property1\', \'property2\', \'property3\'''']')
 								 
 				     		        ]
 				]
