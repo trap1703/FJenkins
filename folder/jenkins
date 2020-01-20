@@ -29,7 +29,7 @@ node {
 		                script: [$class: 'GroovyScript', 
 							script: [classpath: [], 
 								 sandbox: false, 
-								 script: sh(returnStdout: true, script: 'cat ${param_files}')
+								 script: sh(returnStdout: true, script: 'echo ${Z_files}')
 								 
 				     		        ]
 				]
