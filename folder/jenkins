@@ -20,7 +20,7 @@ node {
                 Y_files = X_files.split("\n").collect(),
                 Z_files = "return ${Y_files}",
                 println (Z_files),
-                choice(choices: X_files, description: 'second', name: 'volume')
+                choice(choices: Y_files, description: 'second', name: 'volume')
       	])
     ])
     
