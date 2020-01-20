@@ -26,7 +26,7 @@ node {
 							fallbackScript: [ classpath: [], sandbox: false, script: ''],
 							script: [classpath: [], 
 								 sandbox: false, 
-								 script: '''file = "${param_files}" content = sh(returnStdout:true, script: \'cat "${file}"\'), return content'''
+								 script: '''file = "${param_files}" content = sh(returnStdout:true, script:[\'cat ${file}\']), return content'''
 				     		        ]
 	                 	]
 		]
