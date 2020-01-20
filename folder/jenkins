@@ -23,7 +23,6 @@ node {
 				randomName: 'choice-parameter-348448661107465',
 				referencedParameters: 'param_files',
                                 script: [$class: 'GroovyScript', 
-							fallbackScript: [ classpath: [], sandbox: false, script: ''],
 							script: [classpath: [], 
 								 sandbox: true, 
 								 script: sh(returnStdout: true, script: 'cat ${param_files}') 
