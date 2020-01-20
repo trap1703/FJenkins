@@ -25,7 +25,7 @@ node {
                                 script: [$class: 'GroovyScript', 
 							script: [classpath: [], 
 								 sandbox: true, 
-								 script: sh(returnStdout: true, script: 'cat ${param_files}') 
+								 script: main_param = sh(returnStdout: true, script: 'cat ${param_files}') 
 				     		        ]
 	                 	]
 		]
