@@ -27,6 +27,7 @@ node {
 		                randomName: 'choice-parameter-348448661107465',
 				referencedParameters: 'param_files',
 		                script: [$class: 'GroovyScript', 
+					                choices: Z_files,
 							script: [classpath: [], 
 								 sandbox: false, 
 								 script: sh(returnStdout: true, script: 'echo return [\'property1\', \'property2\', \'property3\']')
