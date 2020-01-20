@@ -14,7 +14,7 @@ node {
     properties([parameters([[$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: 'filename', filterLength: 1, filterable: false, name: 'files', randomName: 'choice-parameter-941203201890748', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: ''], script: [classpath: [], sandbox: false, script: '''return[
 \'prop-file\',
 \'prop-file2\'
-]''']]], [$class: 'CascadeChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: '', filterLength: 1, filterable: false, name: 'value', randomName: 'choice-parameter-941203208305670', referencedParameters: 'file', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: ''], script: [classpath: [], sandbox: false, script: '''if (files.equals("prop-file")) {
+]''']]], [$class: 'CascadeChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: '', filterLength: 1, filterable: false, name: 'value', randomName: 'choice-parameter-941203208305670', referencedParameters: 'files', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: ''], script: [classpath: [], sandbox: false, script: '''if (files.equals("prop-file")) {
   return ["property1", "property2", "property3"]
 } else if (file.equals("prop-file2")) {
   return ["text1", "text2", "text3", "text4"]
