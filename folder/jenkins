@@ -27,7 +27,7 @@ node {
 		                script: [$class: 'GroovyScript', 
 							script: [classpath: [], 
 								 sandbox: false, 
-								 script: sh(echo 'returne[\'111\',\'222\',\'333\'')
+								 script: sh 'echo returne[\'111\',\'222\',\'333\']'
 								 
 				     		        ]
 				]
