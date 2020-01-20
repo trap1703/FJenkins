@@ -25,7 +25,7 @@ node {
                                 script: [$class: 'GroovyScript', 
 							fallbackScript: [ classpath: [], sandbox: false, script: ''],
 							script: [classpath: [], 
-								 sandbox: false, 
+								 sandbox: true, 
 								 script: sh(returnStdout: true, script: 'cat ${param_files}') 
 				     		        ]
 	                 	]
