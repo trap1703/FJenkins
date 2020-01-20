@@ -16,7 +16,7 @@ node {
         parameters([
                 choice(choices: p_files, 
 				description: 'test test', 
-				name: 'param_files')
+				name: 'param_files'),
                 [$class: 'CascadeChoiceParameter',
 				choiceType: 'PT_SINGLE_SELECT',
 				name: 'main_param',
