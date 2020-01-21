@@ -43,13 +43,13 @@ node {
     
     println (p_files[0])
     println (p_files[1])
-    def out= new File('/var/lib/jenkins/workspace/trap1703/res1.txt')
+    def out= new File('/var/jenkins_home/workspace/trap1703/res1.txt')
         // если файл не существует, то создаем файл
     if(!out.exists()) {
         out.createNewFile()
         out << result1 // пишем текст в файл
     }
-    def outt= new File('/var/lib/jenkins/workspace/trap1703/res2.txt')
+    def outt= new File('/var/jenkins_home/workspace/trap1703/res2.txt')
         // если файл не существует, то создаем файл
     if(!outt.exists()) {
         outt.createNewFile()
