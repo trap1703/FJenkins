@@ -55,9 +55,9 @@ node {
         outt.createNewFile()
         outt << result22 // пишем текст в файл
     }    
-    TT_files = sh(returnStdout:true, script: 'cat /var/lib/jenkins/workspace/trap1703/res1.txt')
+    TT_files = sh(returnStdout:true, script: 'cat /var/jenkins_home/workspace/trap1703/res1.txt')
     println (TT_files)
-    TTT_files = sh(returnStdout:true, script: 'cat /var/lib/jenkins/workspace/trap1703/res2.txt')
+    TTT_files = sh(returnStdout:true, script: 'cat /var/jenkins_home/workspace/trap1703/res2.txt')
     println (TTT_files)
     
     properties([parameters([[$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: 'filename', filterLength: 1, filterable: false, name: 'files', randomName: 'choice-parameter-941595250365512', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: ''], script: [classpath: [], sandbox: false, script: sh(returnStdout:true, script: 'cat /var/lib/jenkins/workspace/trap1703/res1.txt')]]], [$class: 'CascadeChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: '', filterLength: 1, filterable: false, name: 'value', randomName: 'choice-parameter-941595264446171', referencedParameters: 'files', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: ''], script: [classpath: [], sandbox: false, script: sh(returnStdout:true, script: 'cat /var/lib/jenkins/workspace/trap1703/res2.txt')]]]])])
